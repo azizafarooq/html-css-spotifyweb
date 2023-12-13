@@ -9,3 +9,59 @@ body{
     background-color: hsl(218.57deg 25.93% 10.59%);
     color: white;
 }
+
+/**S APP-TOP*/
+#app-top{
+    height: calc(100vh - 100px) ;
+    display: flex;
+}
+
+/**APP-NAVBAR*/
+#app-navbar{
+    background-color: hsl(0deg 0% 0%);
+    width: 150px;
+    flex-shrink: 0;
+}
+
+/**APP-MAIN*/
+#app-main{
+    width: var(100% - 300px);
+    flex-grow: 1;
+}
+
+#main-topbar{
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#main-content{
+    overflow: auto;
+    height: calc(100% - 100px);
+}
+
+/**APP-PLAYER*/
+#app-player{
+    background-color: hsl(0deg 0% 15.69%);
+    height: 100px ;
+}
+
+/**MEDIA TABLET*/
+@media all and (max-width:768px) {
+   
+}
+
+/**MEDIA MOBILE*/
+@media all and (max-width:576px) {
+    
+}
+
+/**MEDIA MOBILE XSMALL*/
+@media all and (max-width:320px) {
+    #app-navbar{
+        width: 40px;
+    }
+  
+}
