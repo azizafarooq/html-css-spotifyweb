@@ -22,7 +22,8 @@ body{
 /**DEBUG*/
 .debug{
     border: 1px solid white;
-    padding: 0.5rem;
+    height: 30px;
+    width: calc(100% / 4);
 }
 
 
@@ -35,7 +36,6 @@ body{
 /**APP-NAVBAR*/
 #app-navbar{
     background-color: hsl(0deg 0% 0%);
-    width: 200px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -151,21 +151,81 @@ body{
     height: calc(100% - 100px);
 }
 
+#app-main #main-menu{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 100px;
+
+}
+
+#main-menu .main-menu-item{
+    font-size: 0.7rem;
+    color: hsl(210deg 2.4% 49.02%);
+    font-weight: bold;
+}
+
+#app-main .main-content-item{
+    margin: 0 20px;
+}
+
+#main-content .card-img{
+   max-width: 100px;
+}
+
+.container-cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-content-item h2{
+    margin: 10px 0;
+}
+
+.card{
+    width: 100px;
+}
+.card h3,
+.card h4{
+    text-align: center;
+    margin: 10px auto;
+}
+
+.card-img-round{
+    border-radius: 50%;
+}
+
 /**APP-PLAYER*/
 #app-player{
     background-color: hsl(0deg 0% 15.69%);
     height: 100px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+
+
 
 /**MEDIA TABLET*/
 @media all and (max-width:768px) {
     #app-navbar .logo-small{
         display: none;
     }
+
+    #app-main #main-menu{
+        margin: 0 60px;
+    }
 }
 
 /**MEDIA MOBILE*/
 @media all and (max-width:576px) {
+    #app-main #main-menu{
+        margin: 0 50px;
+    }
     
 }
 
@@ -173,6 +233,7 @@ body{
 @media all and (max-width:320px) {
     #app-navbar{
         width: 55px;
+
     }
 
     #app-navbar .logo-small{
@@ -186,5 +247,9 @@ body{
     #app-navbar .user-name,
     #app-navbar .navbar-option{
         display: none;
+    }
+
+    #app-main #main-menu{
+        margin: 0;
     }
 }
