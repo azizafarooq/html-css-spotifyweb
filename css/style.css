@@ -4,13 +4,29 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: hsl(218.57deg 25.93% 10.59%);
     color: white;
 }
 
-/**S APP-TOP*/
+/**DEBUG*/
+.debug{
+    border: 1px solid white;
+    padding: 0.5rem;
+}
+
+
+/**APP-TOP*/
 #app-top{
     height: calc(100vh - 100px) ;
     display: flex;
@@ -19,8 +35,89 @@ body{
 /**APP-NAVBAR*/
 #app-navbar{
     background-color: hsl(0deg 0% 0%);
-    width: 150px;
+    width: 200px;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+#app-navbar .navbar-img,
+#app-navbar .logo-small{
+    width: 40px;
+}
+
+#app-navbar .navbar-item,
+#app-navbar .navbar-item-playlist,
+#app-navbar .navbar-item-profilo {
+    margin: 5px 0;
+    align-self: left;
+}
+
+#app-navbar .logo-small{
+    display: none;
+}
+
+#app-navbar .logo{
+    width: 130px;
+}
+
+.icona {
+    /*debug*/
+    border: 1px dashed red;
+}
+
+#app-navbar .add-playlist{
+    display: flex;
+    align-items: center;
+}
+
+#app-navbar .add-playlist-button{
+    width: 60px;
+    aspect-ratio: 1;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin-right: 10px;
+}
+
+#app-navbar .navbar-item-profilo{
+    margin-top: auto;
+}
+
+.add-playlist-title,
+.add-playlist,
+.playlist-songs,
+.playlist-songs li{
+    margin: 10px 0;
+}
+
+#app-navbar .user-profile-top{
+    border-bottom: 1px solid white;
+}
+
+.user-profile-bottom{
+    padding-top: 10px;
+}
+
+.user-profile-bottom,
+.user-profile-top{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+#app-navbar .user-download .download-icon{
+    width:20px;
+    margin-right: 10px;
+}
+
+
+#app-navbar .user-download .user-profile-img{
+    width: 30px;
+    background-color: grey;
+    border-radius: 50%;
 }
 
 /**APP-MAIN*/
@@ -35,6 +132,18 @@ body{
     position: sticky;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-topbar{
+    display: flex;
+    align-items: center;
+    padding: 5px 15px 5px 15px;
+    margin: 20px;
+
+    /*debug*/
+    border: 1px dashed red;
 }
 
 #main-content{
@@ -50,7 +159,9 @@ body{
 
 /**MEDIA TABLET*/
 @media all and (max-width:768px) {
-   
+    #app-navbar .logo-small{
+        display: none;
+    }
 }
 
 /**MEDIA MOBILE*/
@@ -61,7 +172,19 @@ body{
 /**MEDIA MOBILE XSMALL*/
 @media all and (max-width:320px) {
     #app-navbar{
-        width: 40px;
+        width: 55px;
     }
-  
+
+    #app-navbar .logo-small{
+        display: flex;
+    }
+
+    #app-navbar .navbar-text,
+    #app-navbar .user-download-text,
+    #app-navbar .navbar-item-playlist,
+    #app-navbar .logo,
+    #app-navbar .user-name,
+    #app-navbar .navbar-option{
+        display: none;
+    }
 }
